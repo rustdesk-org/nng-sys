@@ -86,9 +86,6 @@ fn build_bindgen() {
         .header("src/wrapper.h")
         // #[derive(Default)]
         .derive_default(true)
-        .whitelist_type("nng_.*")
-        .whitelist_function("nng_.*")
-        .whitelist_var("NNG_.*")
         .opaque_type("nng_.*_s")
         // Generate `pub const NNG_UNIT_EVENTS` instead of `nng_unit_enum_NNG_UNIT_EVENTS`
         .prepend_enum_name(false)
